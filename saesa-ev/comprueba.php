@@ -6,7 +6,7 @@
 <body>
 <?php 
   try{
-    $base=new pdo("mysql:host=localhost; dbname=crud1","root","");
+    $base=new pdo("mysql:host=localhost; dbname=wordpress","root","");
     $base->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $sql="SELECT * FROM USUARIOS_PASS WHERE usuario= :login and password= :password";
     $resultado=$base->query($sql);
