@@ -14,8 +14,19 @@
   <!-- Collect the nav links, forms, and other content for toggling -->
   <div class="collapse navbar-collapse navbar-ex1-collapse">
     <ul class="nav navbar-nav">
-      <li><a href="./ver.php">Evaluacion</a></li>
-      <li><a href="./insertar.php">Agregar</a></li>
+      <li><a href="./form-evaluacion.php">Evaluacion</a></li>
+      <li><a href="./form-seccion.php">Nueva sección</a></li>
+      <li><a href="./form-criterio.php">Nuevo criterio</a></li>
+      <li><a href="./form-usuario-registro.php">Nuevo usuario</a></li>
+      <li><a href="./form-privilegio.php">Nuevo privilegio</a></li>
+      <li><a href="./form-usuario-privilegio.php">Asignar privilegio a usuario</a></li>
+      <li><a href="./form-usuario-privilegio.php">Asignar criterio a sección</a></li>
+      <li><a href="./form-usuario-privilegio.php">Asignar sección a usuario</a></li>
+
+
+
+
+
       <li><a href="./cerrar.php">Cerrar Sesion</a></li>
     </ul>
 <!--<form class="navbar-form navbar-left" role="search" action="./buscar.php">
