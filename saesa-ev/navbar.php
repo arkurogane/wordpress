@@ -8,14 +8,15 @@
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-    <a class="navbar-brand" href="./"><b>Inicio</b></a>
+    <a class="navbar-brand" href="../index.php"><b>Inicio</b></a>
   </div>
 
   <!-- Collect the nav links, forms, and other content for toggling -->
   <div class="collapse navbar-collapse navbar-ex1-collapse">
     <ul class="nav navbar-nav">
-      <li><a href="./login.php">Login</a></li>
-      
+      <li><a href="./ver.php">Evaluacion</a></li>
+      <li><a href="./insertar.php">Agregar</a></li>
+      <li><a href="./cerrar.php">Cerrar Sesion</a></li>
     </ul>
 <!--<form class="navbar-form navbar-left" role="search" action="./buscar.php">
       <div class="form-group">
