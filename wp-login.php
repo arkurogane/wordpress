@@ -55,7 +55,7 @@
 <body>
 
 	<div class="container">
-		<form action="saesa-ev/ver.php" method="post">
+		<form action="saesa-ev/intro.php" method="post">
 		<img src="saesa-ev/imagenes/logo2.png" class="img-responsive" alt="">
 		<div class="btn-group dos">
 			<buton class="btn btn-col dropdown-toggle" data-toggle="dropdown">
@@ -85,7 +85,7 @@
 								<input type="Password" name="password" class="form-control" placeholder="******">
 							</div>
 						</div>
-						<input action="ver.php" type="submit" method="post" class="btn btn-primary" name="ingresar" id="ingresar" value="Enviar">
+						<input action="saesa-ev/intro.php" type="submit" method="post" class="btn btn-primary" name="ingresar" id="ingresar" value="Enviar">
 					</div>
 					</form>
 				</div>
