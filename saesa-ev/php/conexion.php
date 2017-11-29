@@ -2,7 +2,7 @@
 $host="localhost";
 $user="root";
 $password="";
-$db="crud1";
+$db="wordpress";
 $con = new mysqli($host,$user,$password,$db);
 
 ?>
