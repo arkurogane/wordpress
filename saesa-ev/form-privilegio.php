@@ -64,7 +64,6 @@ $query = $con->query($sql1);
 	</thead>
 
 	<?php while ($r=$query->fetch_array()):?>
-	<?
 		<tr>
 			<td><?php echo $r["id"]; ?></td>
 			<td><?php echo $r["nombre"]; ?></td>
