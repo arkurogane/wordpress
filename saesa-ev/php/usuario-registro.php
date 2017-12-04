@@ -1,5 +1,4 @@
 <?php
-
  if(!empty($_POST)){
 	if(isset($_POST["user_login"]) &&isset($_POST["user_pass"]) &&isset($_POST["user_email"]) &&isset($_POST["user_rut"])){
 		if($_POST["user_login"]!=""&& $_POST["user_pass"]!=""&&$_POST["user_email"]!=""&&$_POST["user_rut"]!=""){
@@ -17,7 +16,3 @@
 		}
 	}
 }
-
-
-	
-?>

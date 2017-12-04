@@ -1,5 +1,4 @@
 <?php
-
 if(!empty($_POST)){
 	if(isset($_POST["nombre"]) &&isset($_POST["apellido"]) &&isset($_POST["seccion"]) &&isset($_POST["nota"])){
 		if($_POST["nombre"]!=""&& $_POST["apellido"]!=""&&$_POST["seccion"]!=""){
@@ -16,5 +15,3 @@ if(!empty($_POST)){
 		}
 	}
 }
-
-?>

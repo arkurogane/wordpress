@@ -12,12 +12,7 @@
 			}else{
 				print "<script>alert(\"No se pudo agregar.\");window.location='../form-criterio.php';</script>";
 
-				}
+			}
 		}
 	}
 }
-
-
-
-
-?>
