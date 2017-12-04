@@ -110,5 +110,34 @@
 		</header>
 
 
-	
+	<nav id="main-menu" class="navbar navbar-default" role="navigation">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="navbar-header">
+				  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-menu-list">
+					<span class="sr-only"><?php _e('Toggle navigation','iamsocial'); ?></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				  </button>
+				</div>
+				<?php
+					wp_nav_menu( array(
+						'theme_location'    => 'primary',
+						'depth'             => 2,
+						'container'         => 'div',
+						'container_class'   => 'collapse navbar-collapse',
+						'container_id'      => 'main-menu-list',
+						'menu_class'        => 'nav navbar-nav',
+						'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+						'walker'            => new wp_bootstrap_navwalker())
+					);
+				?>
+			</div>
+		</div>
+	</nav>		
+
+		   
+
+
 
