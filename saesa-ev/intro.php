@@ -9,8 +9,8 @@
 <body>
 
 <?php include "navbar.php"; ?>
-<h1> Bienvenido al sistema de evaluación </h1>
-en este portal usted tiene acceso a 
+<h1> Documentación del sistema de evaluación </h1>
+En este portal usted tiene acceso a
 <br>
 - registrar nuevos usuarios
 <br>
