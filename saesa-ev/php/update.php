@@ -18,5 +18,5 @@ for($i=0;$i<sizeof($nota);++$i)
 }
 
 
-print "<script>alert(\"Agregado exitosamente.\");window.location='../form-evaluacion.php';</script>";
+print "<script>alert(\"Actualizado Exitosamente.\");window.location='../form-evaluacion.php';</script>";
 ?>
