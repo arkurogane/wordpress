@@ -14,12 +14,29 @@
 }
 </style>
 
+<style type="text/css">
+.sol{
+	width: 60px;
+	border-radius: 5px;
+}
+.perro{
+	float: right;
+	margin-bottom: 30px;
+	margin-left: 20px;
+}
+.luna{
+	width: 300px;
+	border-radius: 5px;
+}
+</style>
 
 <label>Seccion </label> 
+	<form method="POST" action="php/update.php">
       <select>
         <option value="0">Seleccione:</option>
         <?php
-		  include "conexion.php";								
+		  include "conexion.php";
+
           $query = $con -> query ("SELECT nombre_seccion FROM saesa_ev_seccion");							
           while ($valores = mysqli_fetch_array($query)) {
 												
@@ -39,33 +56,16 @@
           $query = $con -> query ("SELECT id, nombre FROM saesa_ev_criterio");							
           while ($valores = mysqli_fetch_array($query)) {
 												
-            echo '<option value="'.$valores[id].'">'.$valores[nombre].'</option>';
-													
+            echo '<option value="'.$valores[id].'">'.$valores[nombre].'</option>';										
           }
+
         ?>
       </select>
-
+</form>
 <br>
 
 <h1>Registro de sección existentes</h1>
 <br>
-
-
-<style type="text/css">
-.sol{
-	width: 60px;
-	border-radius: 5px;
-}
-.perro{
-	float: right;
-	margin-bottom: 30px;
-	margin-left: 20px;
-}
-.luna{
-	width: 300px;
-	border-radius: 5px;
-}
-</style>
 
 
 <?php
@@ -75,6 +75,7 @@ $sql1= "select evaluacion.id, evaluacion.fecha, evaluacion.wp_users_ID, wp_users
 $query = $con->query($sql1);
 
 ?>
+<form role="form" method="post" action="php/update.php"> 
 <table class="table table-bordered table-hover">
 	<thead>
 		<th>Ev_id</th>
@@ -88,15 +89,18 @@ $query = $con->query($sql1);
 
 	<?php while ($r=$query->fetch_array()):?>
 		<tr>
-			<td><?php echo $r["id"]; ?></td>
+			<td><?php echo $r["id"];?></td>
 			<td><?php echo $r["fecha"]; ?></td>
-			<td><?php echo $r["wp_users_ID"]; ?></td>
+			<td><?php echo $r["wp_users_ID"]; 
+			echo '<input type="text" name="id[]" class="sr-only" value="'.$r["wp_users_ID"].'" />';
+			?></td>
 			<td><?php echo $r["display_name"]; ?></td>
-			<td><?php echo $r["saesa_ev_criterio_id"]; ?></td>
+			<td><?php echo $r["saesa_ev_criterio_id"]; 
+			echo '<input type="text" name="criterio[]" class="sr-only" value="'.$r["saesa_ev_criterio_id"].'" />';
+			?></td>
 			<td><?php echo $r["nombre"]; ?></td>
-			<td><?php echo '<form>'; 
-				echo '<input type="text" class="sol form-control" name="nota" value="'.$r["nota"].'" />';
-				echo '</form>';
+			<td><?php 
+				echo '<input type="text" class="sol form-control" name="nota[]" value="'.$r["nota"].'" />';
 			?></td>
 		</tr>
 	<?php endwhile;?>
@@ -105,27 +109,8 @@ $query = $con->query($sql1);
 </table>
 
 
-<div>
-	<form role="form" method="post" action=""> 
-		<button class="btn btn-sm btn-success perro">Guardar
-		<?
-		$sql = "update notas set nota=\"$_POST[nota]\" from evaluacion";
-		?>
-
-
-		<?php
-
-
-//if($sql!=null){
-//	print "<script>alert(\"Agregado exitosamente.\");window.location='./form-evaluacion.php';</script>";
-//}else{
-//	print "<script>alert(\"No se pudo agregar.\");window.location='./form-evaluacion.php';</script>";
-
-//}
-?>
-		
-		
-		</button>
+<div>	
+		<button class="btn btn-sm btn-success perro">Guardar</button>
 
 
 	</form>
