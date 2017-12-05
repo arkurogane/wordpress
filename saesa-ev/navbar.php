@@ -19,8 +19,8 @@
       <li><a href="./form-usuario-registro.php">Nuevo usuario</a></li>
       <li><a href="./form-privilegio.php">Nuevo privilegio</a></li>
       <li><a href="./form-usuario-privilegio.php">Asignar privilegio a usuario</a></li>
-      <li><a href="./form-usuario-privilegio.php">Asignar criterio a sección</a></li>
-      <li><a href="./form-usuario-privilegio.php">Asignar sección a usuario</a></li>
+      <li><a href="./form-criterio-seccion-ponderacion.php">Asignar criterio a sección</a></li>
+      <li><a href="./form-usuario-seccion.php">Asignar sección a usuario</a></li>
 
       <li><a href="./cerrar.php">Cerrar Sesion</a></li>
     </ul>
