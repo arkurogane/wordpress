@@ -29,9 +29,9 @@
 	border-radius: 5px;
 }
 </style>
-
+<form method="POST" action="form-evaluacion.php">
 <label>Seccion </label> 
-	<form method="POST" action="php/update.php">
+	
       <select>
         <option value="0">Seleccione:</option>
         <?php
@@ -56,11 +56,12 @@
           $query = $con -> query ("SELECT id, nombre FROM saesa_ev_criterio");							
           while ($valores = mysqli_fetch_array($query)) {
 												
-            echo '<option value="'.$valores[id].'">'.$valores[nombre].'</option>';										
+            echo '<option name="crt" value="'.$valores[id].'">'.$valores[nombre].'</option>';										
           }
 
         ?>
       </select>
+      <button class="btn btn-success">filtrar</button>
 </form>
 <br>
 
@@ -70,9 +71,13 @@
 
 <?php
 include "conexion.php";
-
+if(!empty($_POST)){
+$sql1= "select evaluacion.id, evaluacion.fecha, evaluacion.wp_users_ID, wp_users.display_name, evaluacion.saesa_ev_criterio_id, saesa_ev_criterio.nombre, evaluacion.nota from evaluacion, saesa_ev_criterio, wp_users where evaluacion.wp_users_ID=wp_users.ID and evaluacion.saesa_ev_criterio_id=saesa_ev_criterio.id saesa_ev_criterio.id=\"$_POST[crt]\"";
+$query = $con->query($sql1);
+}else{
 $sql1= "select evaluacion.id, evaluacion.fecha, evaluacion.wp_users_ID, wp_users.display_name, evaluacion.saesa_ev_criterio_id, saesa_ev_criterio.nombre, evaluacion.nota from evaluacion, saesa_ev_criterio, wp_users where evaluacion.wp_users_ID=wp_users.ID and evaluacion.saesa_ev_criterio_id=saesa_ev_criterio.id";
 $query = $con->query($sql1);
+}
 
 ?>
 <form role="form" method="post" action="php/update.php"> 
