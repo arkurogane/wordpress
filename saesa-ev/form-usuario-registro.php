@@ -15,6 +15,23 @@
 					<form role="form" method="post" action="php/usuario-registro.php">
 
                         <div class="form-group">
+                            <label for="user_login">Sección </label>
+
+                            <select>
+                                <option value="0">Seleccione:</option>
+                                <?php
+                                include "php/conexion.php";
+                                $query = $con -> query ("SELECT nombre_seccion FROM saesa_ev_seccion");
+                                while ($valores = mysqli_fetch_array($query)) {
+
+                                    echo '<option value="'.$valores[id].'">'.$valores[nombre_seccion].'</option>';
+                                }
+                                ?>
+                            </select>
+                        </div>
+
+
+                        <div class="form-group">
 							<label for="user_login">Nombre usuario</label>
 							<input type="text" class="form-control" name="user_login" required>
 						</div>
@@ -33,6 +50,7 @@
 							<label for="user_email">Correo electrónico</label>
 							<input type="text" class="form-control" name="user_email" required>
 						</div>
+
 
 						<button type="submit" class="btn btn-default">Guardar</button>
 					</form>
