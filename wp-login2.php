@@ -55,7 +55,7 @@
 <body>
 
 	<div class="container">
-		<form action="saesa-ev/intro.php" method="post">
+		<form action="index.php" method="post">
 		<img src="saesa-ev/imagenes/logo2.png" class="img-responsive" alt="">
 		<div class="btn-group dos">
 			<buton class="btn btn-col dropdown-toggle" data-toggle="dropdown">

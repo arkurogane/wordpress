@@ -14,15 +14,15 @@
 </head>
 <body>
   <?php 
-  session_start();
-  if (!isset($_SESSION["usuario"])) {
+ // session_start();
+ // if (!isset($_SESSION["usuario"])) {
       //header("Location:login.php");
-  }else{
+  //}else{
     //header("Location:ver.php");
-  }
-  ?>
+  //}
+  //?>
   
-	<?php include "navbar.php"; ?>
+	<?php //include "navbar.php"; ?>
   <div class="container">
     <div class="row">
       <div class="col-md-12">
