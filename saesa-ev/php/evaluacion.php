@@ -65,7 +65,7 @@
 </form>
 <br>
 
-<h1>Registro de sección existentes</h1>
+<h1>Registro de notas</h1>
 <br>
 
 
