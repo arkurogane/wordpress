@@ -1,1 +1,0 @@
-Crear usuario llamado wordpress con contraseña ipvg-2017 en phpmyadmin
